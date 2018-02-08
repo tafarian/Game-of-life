@@ -16,22 +16,24 @@ document.addEventListener("DOMContentLoaded", function() {
             this.cells = document.querySelectorAll("#board div");
             for (var j=0; j<this.cells.length; j++) {
                 this.cells[j].addEventListener("click", function() {
-                    var element = this;
-                    if ( this.classList !== "live" ) {
-                        this.classList.add("live");
-                    } else if ( this.classList === "live" ) {
-                        this.classList.remove("live");
-                    }
-                    console.log(this.classList)
+                    this.classList.toggle("live")
                 });
             }
         };
+        this.countNeighbours = function(x, y) {
+            for (var i=0; i<this.cells.length; i++) {
+                if ()
+            }
+
+
+        }
 
     };
 
 
     var game = new GameOfLife(10, 10);
     game.createBoard();
+    game.count();
 
     console.log(game);
 
